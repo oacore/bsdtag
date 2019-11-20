@@ -952,7 +952,6 @@ button:focus {
     box-shadow: none;
 }
 
-©
 .mu-contact-form .form-control::-webkit-input-placeholder {
     color: #888;
     font-size: 15px;
@@ -1120,16 +1119,16 @@ button:focus {
         top: 25%;
     }
 
-    .navbar-default .navbar-brand,
-    .navbar-default .navbar-brand:hover,
-    .navbar-default .navbar-brand:focus {
-        margin-top: -7px;
-    }
+    /*.navbar-default .navbar-brand,*/
+    /*.navbar-default .navbar-brand:hover,*/
+    /*.navbar-default .navbar-brand:focus {*/
+    /*    margin-top: -7px;*/
+    /*}*/
 
-    .navbar-brand img {
-        width: 145px;
-        margin-top: -10px;
-    }
+    /*.navbar-brand img {*/
+    /*    width: 145px;*/
+    /*    margin-top: -10px;*/
+    /*}*/
 
     .navbar-default .mu-menu li a {
         margin: 10px 12px 5px;
@@ -1139,6 +1138,11 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+
+    #mu-header {
+        padding: 20px 0;
+    }
+
 
     .navbar-default .mu-menu li a {
         font-size: 14px;
@@ -1183,21 +1187,22 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-    .navbar-default .navbar-toggle {
-        /*border-color: #fff;*/
-    }
+    /*.navbar-default .navbar-toggle {*/
+    /*    border-color: #fff;*/
+    /*}*/
 
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:focus {
         background-color: transparent;
     }
 
-    .navbar-default .navbar-toggle .icon-bar {
-        /*background-color: #fff;*/
-    }
+    /*.navbar-default .navbar-toggle .icon-bar {*/
+    /*    background-color: #fff;*/
+    /*}*/
 
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-        background-color: rgba(0, 0, 0, 0.8);
+        /*background-color: rgba(0, 0, 0, 0.8);*/
+        background-color: ghostwhite;
         text-align: center;
     }
 
@@ -1257,15 +1262,15 @@ button:focus {
 
 @media (max-width: 480px) {
 
-    #mu-header {
-        padding: 10px 0;
-    }
+    /*#mu-header {*/
+    /*    padding: 10px 0;*/
+    /*}*/
 
     .navbar-default .navbar-brand,
     .navbar-default .navbar-brand:hover,
     .navbar-default .navbar-brand:focus {
         font-size: 25px;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .navbar-toggle {
