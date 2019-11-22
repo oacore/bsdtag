@@ -9,3 +9,7 @@ const getTweets = getPublications;
 
 Promise.all([getPublications(), getNews(), getTweets()])
     .then(([publications, news, tweets]) => console.log(publications.length, news, tweets.length));
+
+
+// {{publication.creators.map(({ name }) => name).join(', ')}}
+// {{publication.creators.map(({ name }) => name.given)}} ${name.family}`).join(', ')}}`;

@@ -159,32 +159,32 @@
                             <div class="row">
 
                                 <!-- Service Single Content -->
+                                <!--  http://oro.open.ac.uk/cgi/exportview/research_centre/bsdtag/JSON/bsdtag.js-->
+                                <!-- "title":-->
+                                <!-- "uri": "http:\/\/oro.open.ac.uk\/id\/eprint\/46804",-->
+                                <!--  "creators": [
+                                    {
+                                      "name": {
+                                        "given": "Matteo",
+                                        "family": "Cancellieri"
+                                      },-->
                                 <div class="col-md-12">
                                     <ul class="mu-service-content-single">
-                                        <li><span class="publications-author">Herrmannova, D., Pontika, N., Knoth, P. 2019. </span>
-                                            Do Authors Deposit on Time? Tracking Open Access Policy Compliance. ACM/IEEE
-                                            Joint Conference on Digital Libraries (JCDL), 2019: 206.
+                                        {% for publication in publications %}
+                                        <li>
+                                            <a href="{{publication.uri}}" target="_blank" rel="noopener nofollow"
+                                            <span class="publications-author">
+                                                {% for xxx in publication.creators %}
+                                                        {{xxx.name.given}}
+                                                        {{xxx.name.family}},
+                                                {% endfor %}
+                                            </span> &ndash; &ldquo;{{publication.title}}&rdquo;.
                                         </li>
-                                        <li><span class="publications-author">Herrmannova, D., Pontika, N., Knoth, P. 2019. </span>
-                                            Do Authors Deposit on Time? Tracking Open Access Policy Compliance. ACM/IEEE
-                                            Joint Conference on Digital Libraries (JCDL), 2019: 206.
-                                        </li>
-                                        <li><span class="publications-author">Herrmannova, D., Pontika, N., Knoth, P. 2019. </span>
-                                            Do Authors Deposit on Time? Tracking Open Access Policy Compliance. ACM/IEEE
-                                            Joint Conference on Digital Libraries (JCDL), 2019: 206.
-                                        </li>
-                                        <li><span class="publications-author">Herrmannova, D., Pontika, N., Knoth, P. 2019. </span>
-                                            Do Authors Deposit on Time? Tracking Open Access Policy Compliance. ACM/IEEE
-                                            Joint Conference on Digital Libraries (JCDL), 2019: 206.
-                                        </li>
-                                        <li><span class="publications-author">Herrmannova, D., Pontika, N., Knoth, P. 2019. </span>
-                                            Do Authors Deposit on Time? Tracking Open Access Policy Compliance. ACM/IEEE
-                                            Joint Conference on Digital Libraries (JCDL), 2019: 206.
-                                        </li>
-
+                                        {% endfor %}
                                     </ul>
                                 </div>
                                 <!-- / Service Single Content -->
+
 
 
                             </div>
@@ -729,7 +729,8 @@
                                         <div class="mu-social-media">
                                             <h4>JOIN US</h4>
                                             <ul>
-                                                <li>Interns (Information about erasmus & self-funded internships for bachelor,
+                                                <li>Interns (Information about erasmus & self-funded internships for
+                                                    bachelor,
                                                     master's, and doctoral degree students)
                                                 </li>
                                                 <li>PhD students (funding, topics, application process)</li>
