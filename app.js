@@ -12,7 +12,7 @@ const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/re
     .then(({ data: publications }) => publications);
 
 app.get('/', async (req, res) => {
-    const publications = await getPublications()
+    const publications = await getPublications();
     return res.render('index.html', { publications }) ;
 });
 
