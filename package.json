@@ -1,0 +1,19 @@
+{
+  "name": "@oacore/bsdtag-website",
+  "version": "1.0.0",
+  "description": "Our team website",
+  "repository": "git@github.com:oacore/bsdtag.git",
+  "author": "BSDTAg (kmi.open.ac.uk)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "start": "browser-sync start -s ."
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "browser-sync": "^2.26.7",
+    "nunjucks": "^3.2.0"
+  }
+
+}
