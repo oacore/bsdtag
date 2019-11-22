@@ -476,6 +476,7 @@ button:focus {
 }
 .publications-author{
     font-weight: bold;
+    font-style: italic;
     color:  #e08639;
 }
 
@@ -530,7 +531,7 @@ button:focus {
 }
 
 .mu-service-content-single li:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .mu-service-icon-box {
