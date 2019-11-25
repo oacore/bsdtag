@@ -30,5 +30,5 @@ Promise.all([getPublications(), getNews(), getTweets()])
     .then(([publications, news, tweets]) => ({ publications, news, tweets }))
     .then(context => {
         const html = nunjucks.render('index.html', context);
-        fs.writeFileSync(path.join(__dirname, 'index.html'), html);
+        fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), html);
     });
