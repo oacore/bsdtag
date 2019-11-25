@@ -163,14 +163,45 @@
                                     <ul class="mu-service-content-single">
                                         {% for publication in publications %}
                                         <li>
-                                            <span>{{ publication.authors }}</span>.
-                                            <a class="publications-author" href="{{publication.uri}}" target="_blank" rel="noopener nofollow">&ldquo;{{publication.title}}&rdquo;.</a>
+                                            {% for author in publication.rioxx2_author %}
+                                                {{ author.author }};
+                                            {% endfor %}
+                                            <span class="publications-date">({{ publication.year }})</span>.
+                                            <a class="publications-article" href="{{publication.uri}}" target="_blank"
+                                               rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
+                                            <span class="publications-event">
+                                            {% if publication.event_title %}
+                                                In:  {{ publication.event_title }},
+                                                {{ publication.event_dates }},
+                                                {{ publication.event_location }}
+                                            {% endif %}
+
+                                             {% if publication.rioxx2_type %} &ndash;
+                                                {{ publication.thesis_type }}
+                                                {{ publication.rioxx2_type }}
+                                            {% endif %}
+
+                                            </span>
+
+<!--                                            {% if publication.event_title %}-->
+<!--                                            <dl>-->
+<!--                                                <dt>Event</dt>-->
+<!--                                                <dd>{{ publication.event_title }}</dd>-->
+<!--                                                <dt>Event type</dt>-->
+<!--                                                <dd>{{ publication.event_type }}</dd>-->
+<!--                                                <dt>Dates</dt>-->
+<!--                                                <dd>{{ publication.event_dates }}</dd>-->
+<!--                                                <dt>Location</dt>-->
+<!--                                                <dd>{{ publication.event_location }}</dd>-->
+<!--                                            </dl>-->
+<!--                                            {% endif %}-->
+
+
                                         </li>
                                         {% endfor %}
                                     </ul>
                                 </div>
                                 <!-- / Service Single Content -->
-
 
 
                             </div>

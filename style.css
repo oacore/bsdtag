@@ -474,10 +474,20 @@ button:focus {
     float: left;
     width: 100%;
 }
-.publications-author{
+.publications-article {
     font-weight: bold;
     font-style: italic;
     color:  #e08639;
+}
+
+.publications-date {
+    font-weight: bold;
+    font-style: italic;
+    color:  #1e5f96;
+}
+
+.publications-event {
+    color:  grey;
 }
 
 .mu-service-area {
@@ -531,7 +541,7 @@ button:focus {
 }
 
 .mu-service-content-single li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .mu-service-icon-box {

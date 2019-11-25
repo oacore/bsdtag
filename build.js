@@ -6,15 +6,17 @@ const path = require('path');
 
 const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/research_centre/bsdtag/JSON/bsdtag.js')
     .then(({ data: publications }) => publications)
-    .then(publications => publications.map(publicaiton => ({
-        ...publicaiton,
-        authors: publicaiton.creators
+    .then(publications => publications.map(publication => ({
+        ...publication,
+        authors: publication.creators
             .map(({ name }) => [name.given, name.family].join(' '))
             .map((name, i, { length }) => {
                 const sep = i < length - 2 ? ', ' : ' and ';
                 return i !== length - 1 ? `${name}${sep}` : name
             })
             .join(''),
+        // year: Number.parseInt(publication.rioxx2_publication_date.slice(0, 4)) || null,
+        year: Number.parseInt(publication.rioxx2_publication_date) || null,
     })));
 
 const getNews = () => axios.get('https://news.kmi.open.ac.uk/rss')
