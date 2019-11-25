@@ -169,19 +169,24 @@
                                             <span class="publications-date">({{ publication.year }})</span>.
                                             <a class="publications-article" href="{{publication.uri}}" target="_blank"
                                                rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
-                                            <span class="publications-event">
-                                            {% if publication.event_title %}
-                                                In:  {{ publication.event_title }},
-                                                {{ publication.event_dates }},
-                                                {{ publication.event_location }}
-                                            {% endif %}
 
-                                             {% if publication.rioxx2_type %} &ndash;
-                                                {{ publication.thesis_type }}
-                                                {{ publication.rioxx2_type }}
-                                            {% endif %}
+                                                {% if publication.event_title %}
+                                                    In: <span class="publications-event">{{ publication.event_title }}</span>{% if publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{% endif %}{% endif %}{% if publication.event_location %}, <span class="publications-event">{{ publication.event_location }}</span>{% endif %}
 
-                                            </span>
+                                                {% if publication.publisher %}
+                                                    <span class="publications-event">{{ publication.publisher }}</span>
+                                                {% endif %}
+
+                                                {% if publication.publication %}
+                                                    <span class="publications-event">{{ publication.publication }}</span>{% endif %}{% if publication.volume %}, <span class="publications-event">{{ publication.volume }}</span>
+                                                {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{% endif %}{% if publication.pagerange %},
+                                                    <span class="publications-event">pp. {{ publication.pagerange }}</span>
+                                                {% endif %}
+
+                                                {% if publication.institution %}
+                                                    <span class="publications-event">{{ publication.institution }}</span>
+                                                {% endif %}
+
 
 <!--                                            {% if publication.event_title %}-->
 <!--                                            <dl>-->
