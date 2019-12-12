@@ -160,6 +160,18 @@
 
                                 <!-- Service Single Content -->
                                 <div class="col-md-12">
+                                    <h2 class="mu-heading-title">OUR<span>NEWS</span></h2>
+                                    <span class="mu-header-dot"></span>
+                                        {% for item in news %}
+                                            <article>
+                                                <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
+                                                <p>{{ item.summary | safe }}</p>
+                                            </article>
+                                        {% endfor %}
+                                </div>
+
+                                <!-- Service Single Content -->
+                                <div class="col-md-12">
                                     <ul class="mu-service-content-single">
                                         {% for publication in publications %}
                                         <li>
