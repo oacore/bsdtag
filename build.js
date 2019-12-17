@@ -6,6 +6,13 @@ const path = require('path');
 const FeedParser = require('feedparser');
 const request = require('request'); // for fetching the feed
 
+const authorSet = new Set([
+    'Petr Knoth',
+    'Nancy Pontika',
+    'Drahomira Herrmannova',
+    'David Pride',
+]);
+
 
 const getNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => new Promise((resolve, reject) => {
     const req = request(url);
@@ -37,7 +44,7 @@ const getNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => 
         thumbnail: item['media:thumbnail'] ? item['media:thumbnail']['@']['resource'] : null,
     })))
     .then(news => news
-        .filter(({ author }) => author === 'Nancy Pontika')
+        .filter(({ author }) => authorSet.has(author))
         // use all news
         // .slice(0, 10)
     );
@@ -58,7 +65,7 @@ const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/re
 nunjucks.configure(path.join(__dirname, 'templates'));
 
 Promise.all([getNews(), getPublications()])
-    .then(([news, publications]) => ({ news, publications }))
+    .then(([news, publications]) => ({news, publications}))
     .then(context => {
         const html = nunjucks.render('index.html', context);
         fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), html);
