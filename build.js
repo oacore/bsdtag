@@ -27,10 +27,20 @@ const getNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => 
         while (item = feedparser.read()) collection.push(item);
     });
     feedparser.on('finish', () => {
-        console.log((collection[0]))
+        console.log((collection[0]));
         resolve(collection)
     })
-});
+})
+    .then(news => news.map(item => ({
+        ...item,
+        author: item['dc:creator']['foaf:person']['foaf:name']['#'],
+        thumbnail: item['media:thumbnail'] ? item['media:thumbnail']['@']['resource'] : null,
+    })))
+    .then(news => news
+        .filter(({ author }) => author === 'Nancy Pontika')
+        // use all news
+        // .slice(0, 10)
+    );
 
 const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/research_centre/bsdtag/JSON/bsdtag.js')
     .then(({data: publications}) => publications)
@@ -43,11 +53,6 @@ const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/re
     );
 
 
-// const getNews = () => axios.get('https://news.kmi.open.ac.uk/rostra/rdfall.php?r=2')
-//     .then(({data: news}) => news);
-// const getTweets = getPublications;
-
-
 // Configure tempates
 
 nunjucks.configure(path.join(__dirname, 'templates'));
@@ -58,11 +63,4 @@ Promise.all([getNews(), getPublications()])
         const html = nunjucks.render('index.html', context);
         fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), html);
     });
-
-// Promise.all([getPublications()])
-//     .then(([publications]) => ({publications}))
-//     .then(context => {
-//         const html = nunjucks.render('index.html', context);
-//         fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), html);
-//     });
 

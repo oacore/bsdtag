@@ -165,15 +165,21 @@
                                        rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
 
                                     {% if publication.event_title %}
-                                    In: <span class="publications-event">{{ publication.event_title }}</span>{% if publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{% endif %}{% endif %}{% if publication.event_location %}, <span class="publications-event">{{ publication.event_location }}</span>{% endif %}
+                                    In: <span class="publications-event">{{ publication.event_title }}</span>{% if
+                                    publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{%
+                                    endif %}{% endif %}{% if publication.event_location %}, <span
+                                        class="publications-event">{{ publication.event_location }}</span>{% endif %}
 
                                     {% if publication.publisher %}
                                     <span class="publications-event">{{ publication.publisher }}</span>
                                     {% endif %}
 
                                     {% if publication.publication %}
-                                    <span class="publications-event">{{ publication.publication }}</span>{% endif %}{% if publication.volume %}, <span class="publications-event">{{ publication.volume }}</span>
-                                    {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{% endif %}{% if publication.pagerange %},
+                                    <span class="publications-event">{{ publication.publication }}</span>{% endif %}{%
+                                    if publication.volume %}, <span
+                                        class="publications-event">{{ publication.volume }}</span>
+                                    {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{%
+                                    endif %}{% if publication.pagerange %},
                                     <span class="publications-event">pp. {{ publication.pagerange }}</span>
                                     {% endif %}
 
@@ -661,14 +667,23 @@
                                 <!-- Service Single Content -->
                                 <div class="col-md-12">
                                     {% for item in news %}
-                                    <article>
-                                        <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
-                                        <p>{{ item.summary | safe }}</p>
-                                    </article>
+                                    <div class="row">
+                                        <article>
+                                            {% if item.thumbnail %}
+                                            <div class="col-xs-12 col-md-2">
+                                                <img class="img-thumbnail" src="{{ item.thumbnail }}" alt>
+                                            </div>
+                                            {% endif %}
+                                            <div class="col-xs-12 col-md-10">
+                                                <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
+                                                <strong>{{ item.author }}</strong>,
+
+                                                <p>{{ item.summary | safe }}</p>
+                                            </div>
+                                        </article>
+                                    </div>
                                     {% endfor %}
                                 </div>
-
-
 
 
                             </div>
