@@ -150,80 +150,57 @@
                         <div class="mu-service-header">
                             <h2 class="mu-heading-title">OUR <span>PUBLICATIONS</span></h2>
                             <span class="mu-header-dot"></span>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever</p>
                         </div>
 
-                        <!-- Start Service Content -->
-                        <div class="mu-service-content">
-                            <div class="row">
+                        <!-- Service Single Content -->
+                        <div class="col-md-12">
+                            <ul class="mu-service-content-single">
+                                {% for publication in publications %}
+                                <li>
+                                    {% for author in publication.rioxx2_author %}
+                                    {{ author.author }};
+                                    {% endfor %}
+                                    <span class="publications-date">({{ publication.year }})</span>.
+                                    <a class="publications-article" href="{{publication.uri}}" target="_blank"
+                                       rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
 
-                                <!-- Service Single Content -->
-                                <div class="col-md-12">
-                                    <h2 class="mu-heading-title">OUR<span>NEWS</span></h2>
-                                    <span class="mu-header-dot"></span>
-                                        {% for item in news %}
-                                            <article>
-                                                <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
-                                                <p>{{ item.summary | safe }}</p>
-                                            </article>
-                                        {% endfor %}
-                                </div>
+                                    {% if publication.event_title %}
+                                    In: <span class="publications-event">{{ publication.event_title }}</span>{% if publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{% endif %}{% endif %}{% if publication.event_location %}, <span class="publications-event">{{ publication.event_location }}</span>{% endif %}
 
-                                <!-- Service Single Content -->
-                                <div class="col-md-12">
-                                    <ul class="mu-service-content-single">
-                                        {% for publication in publications %}
-                                        <li>
-                                            {% for author in publication.rioxx2_author %}
-                                                {{ author.author }};
-                                            {% endfor %}
-                                            <span class="publications-date">({{ publication.year }})</span>.
-                                            <a class="publications-article" href="{{publication.uri}}" target="_blank"
-                                               rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
+                                    {% if publication.publisher %}
+                                    <span class="publications-event">{{ publication.publisher }}</span>
+                                    {% endif %}
 
-                                                {% if publication.event_title %}
-                                                    In: <span class="publications-event">{{ publication.event_title }}</span>{% if publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{% endif %}{% endif %}{% if publication.event_location %}, <span class="publications-event">{{ publication.event_location }}</span>{% endif %}
+                                    {% if publication.publication %}
+                                    <span class="publications-event">{{ publication.publication }}</span>{% endif %}{% if publication.volume %}, <span class="publications-event">{{ publication.volume }}</span>
+                                    {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{% endif %}{% if publication.pagerange %},
+                                    <span class="publications-event">pp. {{ publication.pagerange }}</span>
+                                    {% endif %}
 
-                                                {% if publication.publisher %}
-                                                    <span class="publications-event">{{ publication.publisher }}</span>
-                                                {% endif %}
-
-                                                {% if publication.publication %}
-                                                    <span class="publications-event">{{ publication.publication }}</span>{% endif %}{% if publication.volume %}, <span class="publications-event">{{ publication.volume }}</span>
-                                                {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{% endif %}{% if publication.pagerange %},
-                                                    <span class="publications-event">pp. {{ publication.pagerange }}</span>
-                                                {% endif %}
-
-                                                {% if publication.institution %}
-                                                    <span class="publications-event">{{ publication.institution }}</span>
-                                                {% endif %}
+                                    {% if publication.institution %}
+                                    <span class="publications-event">{{ publication.institution }}</span>
+                                    {% endif %}
 
 
-<!--                                            {% if publication.event_title %}-->
-<!--                                            <dl>-->
-<!--                                                <dt>Event</dt>-->
-<!--                                                <dd>{{ publication.event_title }}</dd>-->
-<!--                                                <dt>Event type</dt>-->
-<!--                                                <dd>{{ publication.event_type }}</dd>-->
-<!--                                                <dt>Dates</dt>-->
-<!--                                                <dd>{{ publication.event_dates }}</dd>-->
-<!--                                                <dt>Location</dt>-->
-<!--                                                <dd>{{ publication.event_location }}</dd>-->
-<!--                                            </dl>-->
-<!--                                            {% endif %}-->
+                                    <!--                                            {% if publication.event_title %}-->
+                                    <!--                                            <dl>-->
+                                    <!--                                                <dt>Event</dt>-->
+                                    <!--                                                <dd>{{ publication.event_title }}</dd>-->
+                                    <!--                                                <dt>Event type</dt>-->
+                                    <!--                                                <dd>{{ publication.event_type }}</dd>-->
+                                    <!--                                                <dt>Dates</dt>-->
+                                    <!--                                                <dd>{{ publication.event_dates }}</dd>-->
+                                    <!--                                                <dt>Location</dt>-->
+                                    <!--                                                <dd>{{ publication.event_location }}</dd>-->
+                                    <!--                                            </dl>-->
+                                    <!--                                            {% endif %}-->
 
 
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                <!-- / Service Single Content -->
-
-
-                            </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        <!-- End Service Content -->
+                        <!-- / Service Single Content -->
 
                     </div>
                 </div>
@@ -676,6 +653,27 @@
                             <h2 class="mu-heading-title">LATEST <span>NEWS</span></h2>
                             <span class="mu-header-dot"></span>
                         </div>
+
+                        <!-- Start Service Content -->
+                        <div class="mu-service-content">
+                            <div class="row">
+
+                                <!-- Service Single Content -->
+                                <div class="col-md-12">
+                                    {% for item in news %}
+                                    <article>
+                                        <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
+                                        <p>{{ item.summary | safe }}</p>
+                                    </article>
+                                    {% endfor %}
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- End Service Content -->
 
                         <!--  Twitter News -->
                         <a class="twitter-timeline" data-height="800" data-dnt="true" data-theme="light"
