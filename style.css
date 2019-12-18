@@ -474,20 +474,21 @@ button:focus {
     float: left;
     width: 100%;
 }
+
 .publications-article {
     font-weight: bold;
     font-style: italic;
-    color:  #e08639;
+    color: #e08639;
 }
 
 .publications-date {
     font-weight: bold;
     font-style: italic;
-    color:  #1e5f96;
+    color: #1e5f96;
 }
 
 .publications-event {
-    color:  grey;
+    color: grey;
 }
 
 .mu-service-area {
@@ -713,8 +714,6 @@ button:focus {
 }
 
 
-
-
 /*--------------------*/
 /* Our People */
 /*--------------------*/
@@ -858,7 +857,6 @@ button:focus {
 }
 
 
-
 /*--------------------*/
 /* Latest news */
 /*--------------------*/
@@ -898,9 +896,12 @@ button:focus {
     padding: 15px;
 }
 
-.news-article{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.news-article {
+    padding-bottom: 50px;
+}
+
+.news-article img {
+    margin-bottom: 20px;
 }
 
 
@@ -1140,12 +1141,10 @@ button:focus {
     /*.navbar-default .navbar-brand:focus {*/
     /*    margin-top: -7px;*/
     /*}*/
-
     /*.navbar-brand img {*/
     /*    width: 145px;*/
     /*    margin-top: -10px;*/
     /*}*/
-
     .navbar-default .mu-menu li a {
         margin: 10px 12px 5px;
     }
@@ -1206,7 +1205,6 @@ button:focus {
     /*.navbar-default .navbar-toggle {*/
     /*    border-color: #fff;*/
     /*}*/
-
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:focus {
         background-color: transparent;
@@ -1215,7 +1213,6 @@ button:focus {
     /*.navbar-default .navbar-toggle .icon-bar {*/
     /*    background-color: #fff;*/
     /*}*/
-
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         /*background-color: rgba(0, 0, 0, 0.8);*/
         background-color: ghostwhite;
@@ -1281,7 +1278,6 @@ button:focus {
     /*#mu-header {*/
     /*    padding: 10px 0;*/
     /*}*/
-
     .navbar-default .navbar-brand,
     .navbar-default .navbar-brand:hover,
     .navbar-default .navbar-brand:focus {
