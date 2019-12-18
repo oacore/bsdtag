@@ -6,12 +6,24 @@ const path = require('path');
 const FeedParser = require('feedparser');
 const request = require('request'); // for fetching the feed
 
-const authorSet = new Set([
+const teamMembers = [
     'Petr Knoth',
     'Nancy Pontika',
     'Drahomira Herrmannova',
     'David Pride',
-]);
+    'Lucas Anastasiou',
+    'Bikash Gyawali',
+    'Josef Harag',
+    'Catherine Kuliavets',
+    'Samuel Pearce',
+    'Svetlana Rumyanceva',
+];
+
+const authorSet = new Set(teamMembers);
+const textTokens = [
+    'CORE',
+    ...teamMembers,
+];
 
 
 const getNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => new Promise((resolve, reject) => {
@@ -44,7 +56,12 @@ const getNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => 
         thumbnail: item['media:thumbnail'] ? item['media:thumbnail']['@']['resource'] : null,
     })))
     .then(news => news
-        .filter(({ author }) => authorSet.has(author))
+        .filter(({ author, title, summary }) =>
+            authorSet.has(author) || textTokens.some(token => {
+                const regexp = new RegExp(`\\b${token}\\b`);;
+                return regexp.test(title) || regexp.test(summary);
+            })
+        )
         // use all news
         // .slice(0, 10)
     );
