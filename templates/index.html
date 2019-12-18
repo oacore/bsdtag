@@ -671,7 +671,8 @@
                                         <article>
                                             <div class="col-xs-12 col-md-2">
                                                 {% if item.thumbnail %}
-                                                    <img class="img-thumbnail" width="100%" height="100%" src="{{ item.thumbnail }}" alt>
+                                                <img class="img-thumbnail" width="100%" height="100%"
+                                                     src="{{ item.thumbnail }}" alt>
                                                 {% else %}
                                                 <svg class="img-thumbnail"
                                                      width="100%"
@@ -681,8 +682,11 @@
                                                      focusable="false"
                                                      role="img"
                                                      aria-label="Placeholder: Responsive image">
-                                                    <rect  width="100%" height="100%" fill="#f2f2f2"></rect>
-                                                    <text xmlns="http://www.w3.org/2000/svg" x="50%" y="50%" xml:space="preserve" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#C0C0C0;fill-opacity:1;stroke:none;font-family:Roboto,serif"><tspan x="50%" y="42%">No image</tspan><tspan x="50%" y="58%">available</tspan></text>
+                                                    <rect width="100%" height="100%" fill="#f2f2f2"></rect>
+                                                    <text xmlns="http://www.w3.org/2000/svg" x="50%" y="50%"
+                                                          xml:space="preserve"
+                                                          style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#C0C0C0;fill-opacity:1;stroke:none;font-family:Roboto,serif"><tspan x="50%" y="42%">No image</tspan>
+                                                        <tspan x="50%" y="58%">available</tspan></text>
                                                 </svg>
 
                                                 {% endif %}
@@ -703,15 +707,16 @@
                         </div>
                         <!-- End Service Content -->
 
-                        <!--  Twitter News -->
-                        <a class="twitter-timeline" data-height="800" data-dnt="true" data-theme="light"
-                           data-link-color="#FAB81E" href="https://twitter.com/oacore?ref_src=twsrc%5Etfw">
-                            Tweets by oacore</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <!-- ./ Twitter News -->
+                        <div class="col-md-12">
+                            <!--  Twitter News -->
+                            <a class="twitter-timeline" data-height="800" data-dnt="true" data-theme="light"
+                               data-link-color="#FAB81E" href="https://twitter.com/oacore?ref_src=twsrc%5Etfw">
+                                Tweets by oacore</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <!-- ./ Twitter News -->
+                        </div>
 
-
-                        <div class="text-center">
+                        <div class="col-md-12">
                             <a class="mu-send-msg-btn"
                                href="https://twitter.com/oacore"
                                rel="nofollow noopener"
@@ -719,9 +724,13 @@
                                 VIEW ALL NEWS</a>
                         </div>
 
+
                     </div>
+                    <!-- ./clients-area-->
                 </div>
+
             </div>
+
         </div>
     </section>
     <!-- End Clients -->
