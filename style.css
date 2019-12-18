@@ -898,6 +898,11 @@ button:focus {
     padding: 15px;
 }
 
+.news-article{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /*--------------------*/
 /* Get in touch */
