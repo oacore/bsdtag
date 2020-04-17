@@ -73,7 +73,7 @@ const getPublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/re
             ...publication,
             year: Number.parseInt(publication.rioxx2_publication_date) || null,
         }))
-        .sort((a, b) => a.year - b.year)
+        .sort((a, b) => b.year - a.year)
     );
 
 
