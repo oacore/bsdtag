@@ -35,12 +35,12 @@
           <ul class="nav navbar-nav mu-menu navbar-right">
             <li><a href="#">HOME</a></li>
             <!--            <li><a href="#mu-about">ABOUT US</a></li>-->
-            <li><a href="#mu-service">PUBLICATIONS</a></li>
-            <li><a href="#mu-projects">PROJECTS</a></li>
+            <li><a href="#publications">PUBLICATIONS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <!--            <li><a href="">COLLABORATORS</a></li>-->
-            <li><a href="#mu-team">PEOPLE</a></li>
-            <li><a href="#mu-clients">NEWS</a></li>
-            <li><a href="#mu-contact">CONTACT</a></li>
+            <li><a href="#team">PEOPLE</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -122,75 +122,40 @@
 
 
   <!-- Start PUBLICATIONS -->
-  <section id="service">
+  <section id="publications">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mu-service-area">
-
-            <div class="mu-service-header">
-              <h2 class="mu-heading-title">OUR <span>PUBLICATIONS</span></h2>
-              <span class="mu-header-dot"></span>
-            </div>
-
-            <!-- Service Single Content -->
-            <div class="col-md-12">
-              <ul class="mu-service-content-single">
-                {% for publication in publications %}
-                <li>
-                  {% for author in publication.rioxx2_author %}
-                  {{ author.author }};
-                  {% endfor %}
-                  <span class="publications-date">({{ publication.year }})</span>.
-                  <a class="publications-article" href="{{publication.uri}}" target="_blank"
-                     rel="noopener nofollow">{{publication.rioxx2_title}}</a>.
-
-                  {% if publication.event_title %}
-                  In: <span class="publications-event">{{ publication.event_title }}</span>{% if
-                  publication.event_dates %}, <span class="publications-event">{{ publication.event_dates }}</span>{%
-                  endif %}{% endif %}{% if publication.event_location %}, <span
-                    class="publications-event">{{ publication.event_location }}</span>{% endif %}
-
-                  {% if publication.publisher %}
-                  <span class="publications-event">{{ publication.publisher }}</span>
-                  {% endif %}
-
-                  {% if publication.publication %}
-                  <span class="publications-event">{{ publication.publication }}</span>{% endif %}{%
-                  if publication.volume %}, <span
-                    class="publications-event">{{ publication.volume }}</span>
-                  {% endif %}{% if publication.number %}<span class="publications-event">({{ publication.number }})</span>{%
-                  endif %}{% if publication.pagerange %},
-                  <span class="publications-event">pp. {{ publication.pagerange }}</span>
-                  {% endif %}
-
-                  {% if publication.institution %}
-                  <span class="publications-event">{{ publication.institution }}</span>
-                  {% endif %}
-
-
-                  <!--                      {% if publication.event_title %}-->
-                  <!--                      <dl>-->
-                  <!--                        <dt>Event</dt>-->
-                  <!--                        <dd>{{ publication.event_title }}</dd>-->
-                  <!--                        <dt>Event type</dt>-->
-                  <!--                        <dd>{{ publication.event_type }}</dd>-->
-                  <!--                        <dt>Dates</dt>-->
-                  <!--                        <dd>{{ publication.event_dates }}</dd>-->
-                  <!--                        <dt>Location</dt>-->
-                  <!--                        <dd>{{ publication.event_location }}</dd>-->
-                  <!--                      </dl>-->
-                  <!--                      {% endif %}-->
-
-
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-            <!-- / Service Single Content -->
-
-          </div>
+      <div class="mu-service-area">
+        <div class="mu-service-header">
+          <h2 class="mu-heading-title">OUR <span>PUBLICATIONS</span></h2>
+          <span class="mu-header-dot"></span>
         </div>
+
+        <ul class="mu-service-content-single">
+          {% for publication in publications.slice(0, 10) %}
+            {% include "publications.item.html" %}
+          {% endfor %}
+        </ul>
+
+    
+        <div class="collapse" id="publications-rest">
+          <ul class="mu-service-content-single">
+            {% for publication in publications.slice(10) %}
+              {% include "publications.item.html" %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <button 
+          class="mu-send-msg-btn"
+          type="button"
+          data-toggle="collapse"
+          data-target="#publications-rest"
+          aria-expanded="false"
+          aria-controls="publications-rest"
+        >
+          SHOW ALL
+        </button>
+
       </div>
     </div>
   </section>
@@ -214,7 +179,6 @@
             <!-- Start Projects Content -->
             <div class="mu-projects-content">
               <div class="row">
-
                 <!-- Projects Content -->
                 <div class="col-sm-4">
                   <div class="mu-projects-content-single">
@@ -315,92 +279,53 @@
   <!-- End Team -->
 
 
-  <!-- Start Clients -->
-  <section id="clients">
+  <section id="news">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mu-clients-area">
+      <div class="mu-clients-area">
+        <div class="mu-clients-header">
+          <h2 class="mu-heading-title">LATEST <span>NEWS</span></h2>
+          <span class="mu-header-dot"></span>
+        </div>
 
-            <div class="mu-clients-header">
-              <h2 class="mu-heading-title">LATEST <span>NEWS</span></h2>
-              <span class="mu-header-dot"></span>
-            </div>
+        <div class="mu-service-content">
+          <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-9">
+              {% for item in news.slice(0, 3) %}
+                {% include "news.item.html" %}
+              {% endfor %}
 
-            <!-- Start Service Content -->
-            <div class="mu-service-content">
-              <div class="row">
-
-                <!-- Service Single Content -->
-                <div class="col-md-12">
-                  {% for item in news %}
-                  <div class="row news-article">
-                    <article>
-                      <div class="col-xs-12 col-md-2">
-                        {% if item.thumbnail %}
-                        <img class="img-thumbnail" width="100%" height="100%"
-                           src="{{ item.thumbnail }}" alt>
-                        {% else %}
-                        <svg class="img-thumbnail"
-                           width="100%"
-                           height="100%"
-                           xmlns="http://www.w3.org/2000/svg"
-                           preserveAspectRatio="xMidYMid slice"
-                           focusable="false"
-                           aria-label="Placeholder: Responsive image">
-                          <rect width="100%" height="100%" fill="#f2f2f2"></rect>
-                          <text xmlns="http://www.w3.org/2000/svg"
-                              style="display:block;width:100px;height:100px;font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#C0C0C0;fill-opacity:1;stroke:none;font-family:Roboto,serif">
-                            <tspan x="50%" y="42%">No image</tspan>
-                            <tspan x="50%" y="58%">available</tspan>
-                          </text>
-                        </svg>
-
-                        {% endif %}
-                      </div>
-                      <div class="col-xs-12 col-md-10">
-                        <h3><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
-                        <strong>{{ item.author }}</strong>
-
-                        <p>{{ item.summary | safe }}</p>
-                      </div>
-                    </article>
-                  </div>
-                  {% endfor %}
-                </div>
-
-
+              <div class="collapse" id="news-rest">
+                {% for item in news.slice(3) %}
+                  {% include "news.item.html" %}
+                {% endfor %}
               </div>
-            </div>
-            <!-- End Service Content -->
 
-            <div class="col-md-12">
-              <!--  Twitter News -->
+
+              <button 
+                class="mu-send-msg-btn"
+                type="button"
+                data-toggle="collapse"
+                data-target="#news-rest"
+                aria-expanded="false"
+                aria-controls="news-rest"
+              >
+                SHOW ALL
+              </button>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3">
               <a class="twitter-timeline" data-height="800" data-dnt="true" data-theme="light"
                  data-link-color="#FAB81E" href="https://twitter.com/oacore?ref_src=twsrc%5Etfw">
                 Tweets by oacore</a>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              <!-- ./ Twitter News -->
             </div>
-
-            <div class="col-md-12">
-              <a class="mu-send-msg-btn"
-                 href="https://twitter.com/oacore"
-                 rel="nofollow noopener"
-                 target="_blank">
-                VIEW ALL NEWS</a>
-            </div>
-
-
           </div>
-          <!-- ./clients-area-->
         </div>
 
+        
       </div>
-
     </div>
   </section>
-  <!-- End Clients -->
 
   <!-- Start Contact -->
   <section id="contact">
