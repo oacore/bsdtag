@@ -221,13 +221,14 @@ button:focus {
     margin-top: -12px;
 }
 
-#mu-header.mu-fixed-nav {
-    background-color: rgba(255, 255, 255, 0.8);
+.mu-fixed-nav {
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
     position: fixed;
+    z-index: 1050;
     padding: 15px 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(16px);
 }
 
 /*--------------------*/
@@ -1154,7 +1155,7 @@ button:focus {
 
 @media (max-width: 991px) {
 
-    #mu-header {
+    .intro {
         padding: 20px 0;
     }
 
@@ -1237,8 +1238,7 @@ button:focus {
 
 
 @media (max-width: 640px) {
-
-    #mu-header.mu-fixed-nav {
+    .mu-fixed-nav {
         padding: 10px 0;
     }
 
@@ -1374,4 +1374,22 @@ button:focus {
 @media (max-width: 320px) {
 
 
+}
+
+
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0;
+    min-height: 320px;
+    background: url('images/bsdtag/banner-1.png') no-repeat center / cover;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
+
+.mu-fixed-nav + .intro {
+    margin-top: 75px;
 }
