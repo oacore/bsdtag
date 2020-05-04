@@ -4,7 +4,9 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: roboto, -apple-system, blinkmacsystemfont, 'Segoe UI',
+        'Helvetica Neue', arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';;
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -14,12 +16,6 @@ body {
 ul {
     padding: 0;
     margin: 0;
-}
-
-ul li {
-    list-style: disc;
-    font-size: 17px;
-    line-height: 1.59;
 }
 
 a {
@@ -39,7 +35,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: roboto, -apple-system, blinkmacsystemfont, 'Segoe UI',
+        'Helvetica Neue', arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';;
     font-weight: 700;
     margin-top: 0;
     text-transform: uppercase;
