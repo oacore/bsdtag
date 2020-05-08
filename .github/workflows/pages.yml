@@ -31,3 +31,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       with:
         build_dir: public
+        keep_history: true
+        allow_empty_commit: false
