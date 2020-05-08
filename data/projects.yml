@@ -1,0 +1,59 @@
+description: |
+  The BSDTAg has led and participated in a variety of national and
+  EU-funded projects. Topics range from creating analytics
+  applications and services to text mining scientific and scholarly
+  data, digital libraries, open science and responsible research and
+  innovation.
+items:
+- 
+  id: core
+  name: CORE
+  url: https://core.ac.uk/
+  imageUrl: http://kmi.open.ac.uk/images/projects/core.png
+- 
+  id: diggicore
+  name: DiggiCORE
+  url: http://kmi.open.ac.uk/projects/name/diggicore
+  imageUrl: http://kmi.open.ac.uk/images/projects/diggicore.png
+- 
+  id: servicecore
+  name: ServiceCORE
+  url: http://kmi.open.ac.uk/projects/name/servicecore
+  imageUrl: http://kmi.open.ac.uk/images/projects/serviceCORE.png
+- 
+  id: uk-aggregation
+  name: UK Aggregation
+  url: http://kmi.open.ac.uk/projects/name/uk-aggregation
+- 
+  id: uk-aggregation-2
+  name: UK Aggregation 2
+  url: http://kmi.open.ac.uk/projects/name/uk-aggregation-2
+- 
+  id: europeana-cloud
+  name: Europeana Cloud
+  url: http://kmi.open.ac.uk/projects/name/europeana-cloud
+  imageUrl: http://kmi.open.ac.uk/images/projects/europeana-cloud.png
+- 
+  id: fit4rri
+  name: FIT4RRI
+  url: http://kmi.open.ac.uk/projects/name/fit4rri
+  imageUrl: http://kmi.open.ac.uk/images/projects/Fit4RRI.png
+- 
+  id: foster 
+  name: FOSTER
+  url: http://kmi.open.ac.uk/projects/name/foster 
+  imageUrl: http://kmi.open.ac.uk/images/projects/foster.png
+- 
+  id: foster-plus-
+  name: FOSTER Plus
+  url: http://kmi.open.ac.uk/projects/name/foster-plus-
+  imageUrl: http://kmi.open.ac.uk/images/projects/foster.png
+- 
+  id: on-merrit
+  name: ON-MERRIT
+  url: http://kmi.open.ac.uk/projects/name/on-merrit
+- 
+  id: openminted
+  name: OpenMinTeD
+  url: http://kmi.open.ac.uk/projects/name/openminted
+  imageUrl: http://kmi.open.ac.uk/images/projects/openminted.png

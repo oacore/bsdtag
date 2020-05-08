@@ -90,6 +90,7 @@ const loadContext = async () => {
     const team = await readYaml(path.join(DATA_DIR, 'team.yml'));
     const mission = await readMarkdown(path.join(DATA_DIR, 'mission.md'));
     const research = await readMarkdown(path.join(DATA_DIR, 'research.md'));
+    const projects = await readYaml(path.join(DATA_DIR, 'projects.yml'));
 
     const publications = await retrievePublications();
 
@@ -109,13 +110,14 @@ const loadContext = async () => {
                 })
             )
         });
-    
+
     const context = {
         mission,
         research,
         team,
         news,
         publications,
+        projects,
     };
 
     return context;

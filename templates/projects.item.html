@@ -1,0 +1,13 @@
+<div id="{{ project.id }}" class="mu-projects-content-single">
+  <a href="{{ project.url }}" target="_blank">
+    {% if project.imageUrl %}
+      <div class="mu-projects-profile text-center">
+        <img src="{{ project.imageUrl }}" alt="{{ project.name }}'s logo">
+      </div>
+    {% endif %}
+    <div class="mu-projects-info">
+      <h4>{{ project.name }}</h4>
+      <span>{{ project.description }}</span>
+    </div>
+  </a>
+</div>

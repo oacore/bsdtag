@@ -141,87 +141,26 @@
   <!-- Start Projects -->
   <section id="projects">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mu-projects-area">
+      <div class="mu-projects-area">
+        <div class="mu-projects-header">
+          <h2 class="mu-heading-title">Our <span>projects</span></h2>
+          <span class="mu-header-dot"></span>
 
-            <div class="mu-projects-header">
-              <h2 class="mu-heading-title">OUR <span>PROJECTS</span></h2>
-              <span class="mu-header-dot"></span>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's standard dummy text ever</p>
-            </div>
+          <p>{{ projects.description }}</p>
+        </div>
 
-
-            <!-- Start Projects Content -->
-            <div class="mu-projects-content">
-              <div class="row">
-                <!-- Projects Content -->
-                <div class="col-sm-4">
-                  <div class="mu-projects-content-single">
-                    <a href="https://core.ac.uk/">
-                      <div class="mu-projects-profile text-center">
-                        <img src="images/projects/core.png" alt="project">
-                      </div>
-                      <div class="mu-projects-info">
-                        <h4>CORE</h4>
-                        <span>Connecting Repositories by automatically linking Open Access
-                        research publications </span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- /  Projects Content -->
-
-
-                <!--  Projects Content -->
-                <div class="col-sm-4">
-                  <div class="mu-projects-content-single">
-                    <a href="https://www.fosteropenscience.eu/"
-                       target="_blank"
-                       rel="noopener nofollow">
-                      <div class="mu-projects-profile text-center">
-                        <img src="images/projects/fostert.png" alt="project">
-                      </div>
-                      <div class="mu-projects-info">
-                        <h4>FOSTER</h4>
-                        <span>Facilitate Open Science Training for European Research </span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- /  Projects Content -->
-
-
-                <!--  Projects Content -->
-                <div class="col-sm-4">
-                  <div class="mu-projects-content-single">
-                    <a href="http://kmi.open.ac.uk/projects/name/diggicore"
-                       target="_blank"
-                       rel="noopener nofollow">
-                      <div class="mu-projects-profile text-center">
-                        <img src="images/projects/diggicore.png" alt="project">
-                      </div>
-                      <div class="mu-projects-info">
-                        <h4>Diggi CORE</h4>
-                        <span>Digging into Connected Repositories </span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- / Projects Content -->
-
-
+        <div class="mu-projects-content">
+          <div class="row">
+            {% for project in projects.items %}
+              <div class="col-sm-4">
+                {% include "projects.item.html" %}
               </div>
-            </div>
-            <!-- End Projects Content -->
-
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Projects -->
 
   <!-- Start Team -->
   <section id="team">
