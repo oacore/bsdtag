@@ -34,9 +34,3 @@ jobs:
         keep_history: true
         allow_empty_commit: false
       if: success()
-    - name: Done
-      run: echo 'No need to deploy'
-      if: failure()
-    - name: Done
-      run: echo 'Deployed to gh-pages'
-      if: success()
