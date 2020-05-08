@@ -66,6 +66,7 @@ items:
   name: ON-MERRIT
   description: Observing and Negating Matthew Effects in Responsible Research and Innovation Transition
   url: http://kmi.open.ac.uk/projects/name/on-merrit
+  imageUrl: https://on-merrit.eu/img/logos/logo_on-merrit.svg
 - 
   id: openminted
   name: OpenMinTeD
