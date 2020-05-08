@@ -111,6 +111,8 @@ const loadContext = async () => {
             )
         });
 
+    projects.items = projects.items.filter(({ hidden }) => !hidden)
+
     const context = {
         mission,
         research,
