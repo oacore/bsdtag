@@ -72,6 +72,12 @@ members:
     Manages diaries and meetings,  helps with organising events and conferences; collects information
     from external sources; liaises with staff, suppliers and clients.
 -
+  name: Suchetha Nambanoor-Kunnah
+  role: first-year Ph.D. student
+  picture: suchetha-nambanoor-kunnah.jpg
+  description: |
+    Suchetha’s research focusses on the classification of citations based on their purpose and influence. The main areas of research interest include Text Mining, Machine Learning and Natural Language Processing. Outside of work, she likes to travel and experiment with photography.
+-
   name: Samuel Pearce
   role: Developer and Infrastructure Specialist
   picture: samuel-pearce.jpg
