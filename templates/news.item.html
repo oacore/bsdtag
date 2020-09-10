@@ -2,7 +2,7 @@
   <div class="col-xs-12 col-md-2">
     {% if item.thumbnail %}
     <img class="img-thumbnail" width="100%" height="100%"
-       src="{{ item.thumbnail }}" alt>
+       src="{{ item.thumbnail }}" alt role="presentation" aria-hidden>
     {% else %}
     <svg class="img-thumbnail"
        width="100%"
@@ -10,7 +10,9 @@
        xmlns="http://www.w3.org/2000/svg"
        preserveAspectRatio="xMidYMid slice"
        focusable="false"
-       aria-label="Placeholder: Responsive image">
+       aria-hidden
+       role="presentation" 
+    >
       <rect width="100%" height="100%" fill="#f2f2f2"></rect>
       <text xmlns="http://www.w3.org/2000/svg"
           style="display:block;width:100px;height:100px;font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#C0C0C0;fill-opacity:1;stroke:none;font-family:Roboto,serif">
