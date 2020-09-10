@@ -222,7 +222,7 @@ button:focus {
 }
 
 .mu-fixed-nav {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9) !important;
     width: 100%;
     position: fixed;
     z-index: 1050;
@@ -261,7 +261,7 @@ button:focus {
 .navbar-default .mu-menu li a:focus {
     /*border-bottom: 2px solid #ffffff;*/
     color: #fff;
-    border-bottom: 2px solid #e08639;
+    border-bottom: 2px solid #AF610D;
     /*color: orange;*/
     color: #1e5f96;
 
@@ -274,7 +274,7 @@ button:focus {
     /*color: #fff;*/
     /*color: orange;*/
     /*color: #1e5f96;*/
-    color: #38b554;
+    color: #127745;
 }
 
 
@@ -479,7 +479,7 @@ button:focus {
 .publications-article {
     font-weight: bold;
     font-style: italic;
-    color: #e08639;
+    color: #AF610D;
 }
 
 .publications-date {
@@ -489,7 +489,7 @@ button:focus {
 }
 
 .publications-event {
-    color: grey;
+    color: #424242;
 }
 
 .mu-service-area {
@@ -611,12 +611,7 @@ button:focus {
     width: 100%;
     padding: 15px;
     min-height: 460px;
-}
-
-.mu-projects-content-single:hover {
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+    transition: background-color 500ms;
 }
 
 .mu-projects-content-single:hover .mu-projects-info {
@@ -760,9 +755,7 @@ button:focus {
 }
 
 .mu-team-content-single:hover {
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+    transition: background-color 500ms;
 }
 
 .mu-team-content-single:hover .mu-team-info {
