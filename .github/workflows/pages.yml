@@ -22,8 +22,8 @@ jobs:
     
     - name: Build
       run: |
-        yarn install
-        yarn build
+        npm ci
+        npm run build
     
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.5.1
