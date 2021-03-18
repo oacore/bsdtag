@@ -1385,3 +1385,8 @@ button:focus {
 .mu-fixed-nav + .intro {
     margin-top: 75px;
 }
+
+.mu-menu {
+    margin: 0;
+    padding: 0;
+}
