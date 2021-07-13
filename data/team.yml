@@ -15,7 +15,14 @@ members:
   description: |
     Works on improving and and maintaining CORE services. Elasticsearch guru. While not on his computer coding, he enjoys playing chess, scratching his
     guitar and dreams of climbing Alpe d'Huez or Col de la Madone
-    with his bike.
+    with his bike. 
+ -
+  name: Viktoriia Borsuk
+  role: UX designer
+  picture: viktoriia-borsuk.png
+  description: |
+Responsible for the creating a beautiful user interface design and convenient use of our website. I do everything to make the design work.
+
 -
   name: Valeriy Budko
   role: Full Stack Developer
@@ -80,32 +87,25 @@ members:
   picture: david-pride.jpg
   description: |
     David is in the final year of his PhD. His thesis is attempting to understand what research excellence really means and to this end he is applying large-scale text and data mining techniques to the CORE dataset, to better understand citation contexts. When not digging deep into data, you’ll probably find him attached to a Raspberry Pi somewhere.
--
-  name: Vladislav Shymanovich
-  role: Front-End Developer
-  picture: vladislav_shymanovich.png
-  description: |
-    Avid web developer, who works on improving CORE's web services. JavaScript is his native language.
+
 -
   name: Maria Tarasiuk
-  role: Software Developer
+  role: Front-End developer
   picture: maria-tarasiuk.jpg
   description: |
     Software services and infrastrucutre developer. Keeping and continuously improving our backend systems.
+
+-
+  name: Kostiantyn Voskoboinik
+  role: Software Developer
+  picture: kostiantyn_voskoboinik.png   
+    
 -
   name: Bethany Walker
   role: Manager, Business & Partnerships
   picture: bethany_walker.jpg
   description: |
     Bethany is responsible for CORE’s business development and maintaining our commercial partnerships programme. Her goal is to help internal and external customers get the very best from CORE. In her spare time, Bethany likes to knit and spend time in the garden trying to keep plants alive.
--
-  name: Viktor Yakubiv
-  role: Senior Front-End Developer
-  picture: viktor-yakubiv.jpg
-  description: |
-    An expert in Web Development who believes that functional and accessible UI
-    is the key of success of the product. Leads front-end development
-    and maintains CORE's design system.
 -
   name: Anna Zelinska
   role: Project manager
@@ -114,6 +114,10 @@ members:
     Helps to provide high quality services and deliver the best results as
     quickly as possible. Supports developers to improve software. Inspires by
     books and new knowlege.
+-
+  name: Anton Zhuk
+  role: Back-end developer
+  picture: Anton_Zhuk.png
 
 past-members:
 - Giorgio Basile
@@ -129,5 +133,7 @@ past-members:
 - Gabriela Pavel
 - Vojtech Robotka
 - Svetlana Rumyanceva
+- Vladislav Shymanovich
 - Ian Tindle
+- Viktor Yakubiv
 - Zdenek Zdrahal
