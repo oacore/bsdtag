@@ -101,20 +101,6 @@ members:
   picture: kostiantyn_voskoboinik.png   
     
 -
-  name: Bethany Walker
-  role: Manager, Business & Partnerships
-  picture: bethany_walker.jpg
-  description: |
-    Bethany is responsible for CORE’s business development and maintaining our commercial partnerships programme. Her goal is to help internal and external customers get the very best from CORE. In her spare time, Bethany likes to knit and spend time in the garden trying to keep plants alive.
--
-  name: Anna Zelinska
-  role: Project manager
-  picture: anna-zelinska.jpeg
-  description: |
-    Helps to provide high quality services and deliver the best results as
-    quickly as possible. Supports developers to improve software. Inspires by
-    books and new knowlege.
--
   name: Anton Zhuk
   role: Back-end developer
   picture: Anton_Zhuk.png
@@ -137,3 +123,5 @@ past-members:
 - Ian Tindle
 - Viktor Yakubiv
 - Zdenek Zdrahal
+- Anna Zelinska
+- Bethany Walker
