@@ -42,7 +42,7 @@ items:
   name: Europeana Cloud
   description: eCloud
   url: http://kmi.open.ac.uk/projects/name/europeana-cloud
-  imageUrl: /projects/europeana-cloud.png
+  imageUrl: /images/projects/europeana-cloud.png
 - 
   id: fit4rri
   name: FIT4RRI
