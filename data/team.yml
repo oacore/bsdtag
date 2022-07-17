@@ -104,6 +104,11 @@ members:
   name: Anton Zhuk
   role: Back-end developer
   picture: Anton_Zhuk.png
+  
+-
+  name: Andrew Vasiliev
+  role: System Administrator
+  picture: andrew-vasiliev.png
 
 past-members:
 - Giorgio Basile
