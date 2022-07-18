@@ -66,12 +66,6 @@ members:
     Text Mining, Machine Learning and Natural Language Processing. Outside of
     work, she likes to travel and experiment with photography.
 -
-  name: Samuel Pearce
-  role: Developer and Infrastructure Specialist
-  picture: samuel-pearce.jpg
-  description: |
-    Main responsible for CORE's impressive high availability infrastructure. Backend operations technical lead, ensuring the technical aspects of daily operations of CORE, data aggregation and dealing with technical issues.
--
   name: Nancy Pontika
   role: Open Access Specialist & Communications
   picture: nancy-pontika.jpg
@@ -130,3 +124,4 @@ past-members:
 - Zdenek Zdrahal
 - Anna Zelinska
 - Bethany Walker
+- Samuel Pearce
