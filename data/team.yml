@@ -9,15 +9,7 @@ members:
     Believes in free unrestricted access to research for all. Developed the first CORE prototype in 2010. Excited by
     improving machine access to scientific literature to support text and data analysis.
 -
-  name: Lucas Anastasiou
-  role: Senior Developer
-  picture: lucas-anastasiou.jpg
-  description: |
-    Works on improving and and maintaining CORE services. Elasticsearch guru. While not on his computer coding, he enjoys playing chess, scratching his
-    guitar and dreams of climbing Alpe d'Huez or Col de la Madone
-    with his bike.
--
-  name: Viktoriia Borsuk
+  name: Viktoriia Pavlenko
   role: UX designer
   picture: viktoriia-borsuk.png
   description: |
@@ -39,23 +31,6 @@ members:
     Works on improving and maintaining CORE services. He is a detail knowledge base of
     all CORE services. Has been developing for CORE for several years and Continuous Integration secret lover.
     Once he was a Super Mario plumber.
--
-  name: Drahomira Herrmannova
-  role: Data Analyst & Researcher
-  picture: drahomira-herrmannova.jpg
-  description: |
-    Works with the rest of the team on both front- and back-end development.
-    Enjoys maintaining and improving CORE as it provides her with useful data
-    for her PhD. Dreams of turning CORE into a hub for Semantometric research.
-    Book lover and sports enthusiast in her spare time.
--
-  name: Catherine Kuliavets
-  role: Personal & Team Administrative Assistant
-  picture: catherine-kuliavets.jpg
-  description: |
-    Responsible for acting as the first point of contact for a range of tasks and common queries.
-    Manages diaries and meetings,  helps with organising events and conferences; collects information
-    from external sources; liaises with staff, suppliers and clients.
 -
   name: Suchetha Nambanoor-Kunnah
   role: PhD Student
@@ -81,20 +56,18 @@ members:
   picture: david-pride.jpg
   description: |
     David is in the final year of his PhD. His thesis is attempting to understand what research excellence really means and to this end he is applying large-scale text and data mining techniques to the CORE dataset, to better understand citation contexts. When not digging deep into data, you’ll probably find him attached to a Raspberry Pi somewhere.
-
--
-  name: Maria Tarasiuk
-  role: Front-End developer
-  picture: maria-tarasiuk.jpg
-  description: |
-    Software services and infrastrucutre developer. Keeping and continuously improving our backend systems.
-
--
-  name: Kostiantyn Voskoboinik
-  role: Software Developer
-  picture: kostiantyn_voskoboinik.png   
     
 -
+  name: Ekaterine Chkhaidze
+  role: Front-end developer
+  picture: Ekaterine_Chkhaidze.png
+  
+  -
+  name: Halyna Torchylo
+  role: Personal & Team Administrative Assistant
+  picture: halyna_torchylo.png
+  
+  -
   name: Anton Zhuk
   role: Back-end developer
   picture: Anton_Zhuk.png
@@ -105,6 +78,11 @@ members:
   picture: andrew-vasiliev.png
 
 past-members:
+- Lucas Anastasiou
+- Drahomira Herrmannova
+- Catherine Kuliavets
+- Kostiantyn Voskoboinik
+- Maria Tarasiuk
 - Giorgio Basile
 - Bikash Gyawali
 - Aristotelis Charalampous
