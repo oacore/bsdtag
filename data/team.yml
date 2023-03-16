@@ -9,13 +9,12 @@ members:
     Believes in free unrestricted access to research for all. Developed the first CORE prototype in 2010. Excited by
     improving machine access to scientific literature to support text and data analysis.
 -
-  name: Lucas Anastasiou
-  role: Senior Developer
-  picture: lucas-anastasiou.jpg
+  name: Viktoriia Pavlenko
+  role: UX designer
+  picture: viktoriia-borsuk.png
   description: |
-    Works on improving and and maintaining CORE services. Elasticsearch guru. While not on his computer coding, he enjoys playing chess, scratching his
-    guitar and dreams of climbing Alpe d'Huez or Col de la Madone
-    with his bike.
+    Responsible for the creating a beautiful user interface design and convenient use of our website. I do everything to make the design work.
+
 -
   name: Valeriy Budko
   role: Full Stack Developer
@@ -29,54 +28,18 @@ members:
   role: Lead Developer (Backend)
   picture: matteo-cancellieri.jpg
   description: |
-    Works on improving and and maintaining CORE services. He is a detail knowledge base of
+    Works on improving and maintaining CORE services. He is a detail knowledge base of
     all CORE services. Has been developing for CORE for several years and Continuous Integration secret lover.
     Once he was a Super Mario plumber.
 -
-  name: Bikash Gyawali
-  role: Data Analyst & Researcher
-  picture: bikash-gyawali.jpg
+  name: Suchetha Nambanoor-Kunnah
+  role: PhD Student
+  picture: suchetha-nambanoor-kunnath.jpg
   description: |
-    A computational linguist and researcher working on building a better
-    recommender service for the CORE platform. Firmly believes in the motto
-    "Work hard, play hard".
--
-  name: Jozef Harag
-  role: Full Stack Developer
-  picture: jozef-harag.jpg
-  description: |
-    A lover of new technologies. He enjoys writing clean and reusable code in both Javascript & Python.
-    At CORE he mostly works on the Reader and the Analytics Dashboard.
--
-  name: Drahomira Herrmannova
-  role: Data Analyst & Researcher
-  picture: drahomira-herrmannova.jpg
-  description: |
-    Works with the rest of the team on both front- and back-end development.
-    Enjoys maintaining and improving CORE as it provides her with useful data
-    for her PhD. Dreams of turning CORE into a hub for Semantometric research.
-    Book lover and sports enthusiast in her spare time.
--
-  name: Alexander Huba
-  role: Software Developer
-  picture: alexander-huba.png
-  description: |
-    Helps to design and create robust code applying industry best practices to the backend components of CORE.
-    In his spare time, loves playing guitar, swimming and reading.
--
-  name: Catherine Kuliavets
-  role: Personal & Team Administrative Assistant
-  picture: catherine-kuliavets.jpg
-  description: |
-    Responsible for acting as the first point of contact for a range of tasks and common queries.
-    Manages diaries and meetings,  helps with organising events and conferences; collects information
-    from external sources; liaises with staff, suppliers and clients.
--
-  name: Samuel Pearce
-  role: Developer and Infrastructure Specialist
-  picture: samuel-pearce.jpg
-  description: |
-    Main responsible for CORE's impressive high availability infrastructure. Backend operations technical lead, ensuring the technical aspects of daily operations of CORE, data aggregation and dealing with technical issues.
+    Suchetha’s research focusses on the classification of citations based on
+    their purpose and influence. The main areas of research interest include
+    Text Mining, Machine Learning and Natural Language Processing. Outside of
+    work, she likes to travel and experiment with photography.
 -
   name: Nancy Pontika
   role: Open Access Specialist & Communications
@@ -89,43 +52,54 @@ members:
     read and travel.
 -
   name: David Pride
-  role: Outreach & Enterprise Manager
+  role: Research Associate
   picture: david-pride.jpg
   description: |
     David is in the final year of his PhD. His thesis is attempting to understand what research excellence really means and to this end he is applying large-scale text and data mining techniques to the CORE dataset, to better understand citation contexts. When not digging deep into data, you’ll probably find him attached to a Raspberry Pi somewhere.
+    
 -
-  name: Svetlana Rumyanceva
-  role: Project Manager
-  picture: svetlana-rumyanceva.jpg
-  description: |
-    Responsible for helping to provide high quality services and deliver the best possible results as quickly as possible.
-    Believes that smooth communication and motivation is the basis of efficient
-    teamwork and successful projects. Passionate about networking,
-    achieving great results and acquiring new knowledge.
+  name: Ekaterine Chkhaidze
+  role: Front-end developer
+  picture: Ekaterine_Chkhaidze.png
+  
+  -
+  name: Halyna Torchylo
+  role: Personal & Team Administrative Assistant
+  picture: halyna_torchylo.png
+  
+  -
+  name: Anton Zhuk
+  role: Back-end developer
+  picture: Anton_Zhuk.png
+  
 -
-  name: Maria Tarasiuk
-  role: Software Developer
-  picture: maria-tarasiuk.jpg
-  description: |
-    Software services and infrastrucutre developer. Keeping and continuously improving our backend systems.
--
-  name: Viktor Yakubiv
-  role: Senior Front-End Developer
-  picture: viktor-yakubiv.jpg
-  description: |
-    An expert in Web Development who believes that functional and accessible UI
-    is the key of success of the product. Leads front-end development
-    and maintains CORE's design system.
+  name: Andrew Vasiliev
+  role: System Administrator
+  picture: andrew-vasiliev.png
 
 past-members:
+- Lucas Anastasiou
+- Drahomira Herrmannova
+- Catherine Kuliavets
+- Kostiantyn Voskoboinik
+- Maria Tarasiuk
 - Giorgio Basile
+- Bikash Gyawali
 - Aristotelis Charalampous
+- Jozef Harag
+- Alexander Huba
+- Tomas Korec
 - Dominika Koroncziova
-- Gabriela Pavel
-- Ian Tindle
-- Jakub Novotny
 - Magdalena Krygielova
 - Sergei Misak
-- Tomas Korec
+- Jakub Novotny
+- Gabriela Pavel
 - Vojtech Robotka
+- Svetlana Rumyanceva
+- Vladislav Shymanovich
+- Ian Tindle
+- Viktor Yakubiv
 - Zdenek Zdrahal
+- Anna Zelinska
+- Bethany Walker
+- Samuel Pearce
