@@ -1,8 +1,8 @@
-Big Scientific Data and Text Analytics Group - BSDTAg Website
+Big Scientific Data and Text Analytics Group - BSDTAg Website!
 ----
 
 
-    yarn install
+    yarn install 
 
     yarn build
 
