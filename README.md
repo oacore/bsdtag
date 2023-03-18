@@ -1,13 +1,12 @@
-Big Scientific Data and Text Analytics Group - BSDTAg Website!
-----
+## Big Scientific Data and Text Analytics Group - BSDTAg Website!
 
+## Build project
 
-    yarn install 
-
+```
+    yarn install
     yarn build
-
     yarn start
-
+```
  ---------------------------------------
        Local: http://localhost:3000
        External: http://192.168.50.159:3000
