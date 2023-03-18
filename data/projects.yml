@@ -11,7 +11,7 @@ items:
   name: CORE
   description: The world's largest collection of open access research papers
   url: https://core.ac.uk/
-  imageUrl: http://kmi.open.ac.uk/images/projects/core.png
+  imageUrl: /images/projects/core.png
 - 
   hidden: true
   id: diggicore
@@ -42,19 +42,19 @@ items:
   name: Europeana Cloud
   description: eCloud
   url: http://kmi.open.ac.uk/projects/name/europeana-cloud
-  imageUrl: http://kmi.open.ac.uk/images/projects/europeana-cloud.png
+  imageUrl: /images/projects/europeana-cloud.png
 - 
   id: fit4rri
   name: FIT4RRI
   description: Fostering Improved Training Tools for Responsible Research and Innovation
   url: http://kmi.open.ac.uk/projects/name/fit4rri
-  imageUrl: http://kmi.open.ac.uk/images/projects/Fit4RRI.png
+  imageUrl: /images/projects/Fit4RRI.png
 - 
   id: foster 
   name: FOSTER & FOSTER Plus
   description: FOSTER and FOSTER Plus project focuses on promoting the practical implementation of Open Science, with activities targeting academic staff and young scientists.
   url: https://www.fosteropenscience.eu
-  imageUrl: http://kmi.open.ac.uk/images/projects/foster.png
+  imageUrl: /images/projects/foster.png
 - 
   hidden: true
   id: foster 
@@ -80,4 +80,4 @@ items:
   name: OpenMinTeD
   description: Open Mining Infrastructure for Text & Data
   url: http://kmi.open.ac.uk/projects/name/openminted
-  imageUrl: http://kmi.open.ac.uk/images/projects/openminted.png
+  imageUrl: /images/projects/openminted.png

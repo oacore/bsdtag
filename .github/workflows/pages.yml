@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '* */12 * * *'
 
 jobs:
   build:
@@ -20,12 +22,15 @@ jobs:
     
     - name: Build
       run: |
-        yarn install
-        yarn build
+        npm ci
+        npm run build
     
     - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v1.2.4
+      uses: crazy-max/ghaction-github-pages@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       with:
         build_dir: public
+        keep_history: true
+        allow_empty_commit: false
+      if: success()

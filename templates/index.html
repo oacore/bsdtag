@@ -5,7 +5,8 @@
 </head>
 <body>
 
-<!-- Start Header -->
+<a class="sr-only sr-only-focusable" href="#main">Skip to content</a>
+
 <div id="header" class="navbar navbar-default mu-navbar mu-fixed-nav">
   <div class="container">
     <div class="navbar-header">
@@ -18,12 +19,12 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="#">
-        <img class="bsdtag-logo" src="images/bsdtag/BSDTAg.svg" alt="logo">
-      </a>
+      <span class="navbar-brand" href="#">
+        <img class="bsdtag-logo" src="images/bsdtag/BSDTAg.svg" alt="BSDTAg">
+      </span>
     </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+	  
     <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav mu-menu navbar-right">
         <li><a href="#">HOME</a></li>
@@ -36,21 +37,15 @@
     </nav>
   </div>
 </div>
-<!-- End Header -->
 
-<!-- Start Home -->
 <header class="intro">
   <div class="container">
     <h1>Big Scientific Data and Text Analytics Group</h1>
   </div>
 </header>
-<!-- End Home -->
 
-<!-- Start main content -->
 
-<main role="main">
-
-  <!-- Start About -->
+<main id="main">
   <section id="about">
     <div class="container">
       <div class="row">
@@ -67,7 +62,7 @@
 											<span class="mu-about-icon-box">
 												<i class="icon-lock-open"></i>
 											</span>
-                    <h4>{{ mission.title }}</h4>
+                    <h2>{{ mission.title }}</h2>
                   </div>
                   {{ mission.body | safe }}
                 </div>
@@ -79,7 +74,7 @@
 											<span class="mu-about-icon-box">
 												<i class="icon-graduation"></i>
 											</span>
-                    <h4>{{ research.title }}</h4>
+                    <h2>{{ research.title }}</h2>
                   </div>
                   {{ research.body | safe }}
                 </div>
@@ -95,10 +90,7 @@
       </div>
     </div>
   </section>
-  <!-- End About -->
 
-
-  <!-- Start PUBLICATIONS -->
   <section id="publications">
     <div class="container">
       <div class="mu-service-area">
@@ -136,9 +128,7 @@
       </div>
     </div>
   </section>
-  <!-- End PUBLICATIONS -->
 
-  <!-- Start Projects -->
   <section id="projects">
     <div class="container">
       <div class="mu-projects-area">
@@ -162,7 +152,7 @@
     </div>
   </section>
 
-  <!-- Start Team -->
+
   <section id="team">
     <div class="container">
       <div class="row">
@@ -194,8 +184,6 @@
       </div>
     </div>
   </section>
-  <!-- End Team -->
-
 
   <section id="news">
     <div class="container">
@@ -238,14 +226,11 @@
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
-        </div>
-
-        
+        </div>  
       </div>
     </div>
   </section>
 
-  <!-- Start Contact -->
   <section id="contact">
     <div class="container">
       <div class="row">
@@ -263,19 +248,18 @@
 
                 <div class="col-md-6">
                   <div class="mu-contact-left">
-
-
-                    <iframe allowfullscreen
-                        frameborder="0" height="500"
+                    <iframe
+                        allowfullscreen
+                        title="Knowledge Media Institute on a map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2455.0071527899513!2d-0.7105597845507344!3d52.024967379723485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877ab318876b757%3A0x12d6530999f5b4a0!2sKnowledge%20Media%20Institute!5e0!3m2!1sen!2sua!4v1587541316845!5m2!1sen!2sua"
-                        style="border:0" width="100%">
+                        style="border:0; width: 100%; height:500px; border: 0;">
                     </iframe>
                   </div>
                 </div>
 
                 <div class="col-md-3">
                   <div class="mu-contact-right">
-                    <h4>FIND US</h4>
+                    <h3>FIND US</h3>
                     <address>
                       <p>Knowledge Media Institute</p>
                       <p>The Open University</p>
@@ -286,7 +270,7 @@
                     </address>
                     <br/>
                     <div class="mu-social-media">
-                      <h4>SOCIAL</h4>
+                      <h3>SOCIAL</h3>
                       <a href="https://twitter.com/oacore"
                          rel="nofollow noopener"
                          target="_blank">
@@ -303,7 +287,7 @@
                 <div class="col-md-3">
                   <div class="mu-contact-right">
                     <div class="mu-social-media">
-                      <h4>JOIN US</h4>
+                      <h3>JOIN US</h3>
                       <ul>
                         <li>Interns (Information about erasmus & self-funded internships for
                           bachelor,
@@ -320,45 +304,31 @@
 
               </div>
             </div>
-            <!-- End Contact Content -->
 
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Contact -->
-
-
 </main>
 
-<!-- End main content -->
-
-
-<!-- Start footer -->
-<footer id="footer" role="contentinfo">
+<footer id="footer">
   <div class="container">
     <div class="mu-footer-area">
       <a href="http://kmi.open.ac.uk/" rel="nofollow noopener" target="_blank">
-        <img src="images/projects/kmi.png" alt="footer logo">
+        <img src="images/projects/kmi.png" alt="Knowledge Media Institute">
       </a>
       <a href="http://www.open.ac.uk/" rel="nofollow noopener" target="_blank">
-        <img src="images/projects/ou.png" alt="footer logo">
+        <img src="images/projects/ou.png" alt="The Open University">
       </a>
     </div>
   </div>
 
 </footer>
-<!-- End footer -->
 
-
-<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
-<!-- Custom js -->
 <script src="js/custom.js" type="text/javascript"></script>
-
 
 </body>
 </html>
