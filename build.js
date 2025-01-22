@@ -45,7 +45,10 @@ const readMarkdown = (filepath) => new Promise((resolve, reject) => {
 });
 
 const retrieveRdf = (url) => new Promise((resolve, reject) => {
-    const req = request(url);
+    const options = {
+        headers: { 'User-Agent': 'Mozilla/5.0' }
+    }
+    const req = request(url, options);
     const feedparser = new FeedParser();
 
     req.on('error', reject);
@@ -69,11 +72,11 @@ const retrieveRdf = (url) => new Promise((resolve, reject) => {
     });
 });
 
-const retrieveNews = (url = 'https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11') => retrieveRdf(url)
+const retrieveNews = (url = 'https://blog.kmi.open.ac.uk/projects/CORE/feed/') => retrieveRdf(url)
     .then(news => news.map(item => ({
         ...item,
-        author: item['dc:creator']['foaf:person']['foaf:name']['#'],
-        thumbnail: item['media:thumbnail'] ? item['media:thumbnail']['@']['resource'] : null,
+        author: item['rss:author']['#'],
+        thumbnail: item['rss:image'] ? item['rss:image']['@'] : null,
     })))
 
 const retrievePublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/research_centre/bsdtag/JSON/bsdtag.js')
@@ -94,23 +97,22 @@ const loadContext = async () => {
 
     const publications = await retrievePublications();
 
-    const news = await retrieveNews('https://news.kmi.open.ac.uk/rostra/rdfall.php?r=11')
-        .then(news => {
-            const teamMembers = team.members.map(member => member.name);
-            const authorSet = new Set(teamMembers);
-            const textTokens = [
-                'CORE',
-                ...teamMembers,
-            ];
-
-            return news.filter(({ author, title, summary }) =>
-                authorSet.has(author) || textTokens.some(token => {
-                    const regexp = new RegExp(`\\b${token}\\b`);;
-                    return regexp.test(title) || regexp.test(summary);
-                })
-            )
-        });
-
+    const news = await retrieveNews('https://blog.kmi.open.ac.uk/projects/CORE/feed/')
+        // .then(news => {
+        //     const teamMembers = team.members.map(member => member.name);
+        //     const authorSet = new Set(teamMembers);
+        //     const textTokens = [
+        //         'CORE',
+        //         ...teamMembers,
+        //     ];
+        //     console.log(news)
+        //     return news.filter(({ author, title, summary }) =>
+        //         authorSet.has(author) || textTokens.some(token => {
+        //             const regexp = new RegExp(`\\b${token}\\b`);;
+        //             return regexp.test(title) || regexp.test(summary);
+        //         })
+        //     )
+        // });
     projects.items = projects.items.filter(({ hidden }) => !hidden)
 
     const context = {
