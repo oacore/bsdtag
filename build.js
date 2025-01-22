@@ -78,7 +78,6 @@ const retrieveNews = (url = 'https://blog.kmi.open.ac.uk/projects/CORE/feed/') =
             if (item['rss:image'] && item['rss:image']['url'] && item['rss:image']['url']['#']) {
                 thumbnail = item['rss:image']['url']['#'];
             }
-
             return ({
                 ...item,
                 author: item['rss:author']['#'],
