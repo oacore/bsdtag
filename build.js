@@ -73,11 +73,18 @@ const retrieveRdf = (url) => new Promise((resolve, reject) => {
 });
 
 const retrieveNews = (url = 'https://blog.kmi.open.ac.uk/projects/CORE/feed/') => retrieveRdf(url)
-    .then(news => news.map(item => ({
-        ...item,
-        author: item['rss:author']['#'],
-        thumbnail: item['rss:image'] ? item['rss:image']['@'] : null,
-    })))
+    .then(news => news.map(item => {
+            let thumbnail = null
+            if (item['rss:image'] && item['rss:image']['url'] && item['rss:image']['url']['#']) {
+                thumbnail = item['rss:image']['url']['#'];
+            }
+            return ({
+                ...item,
+                author: item['rss:author']['#'],
+                thumbnail: thumbnail,
+            })
+        }
+    ))
 
 const retrievePublications = () => axios.get('http://oro.open.ac.uk/cgi/exportview/research_centre/bsdtag/JSON/bsdtag.js')
     .then(({ data: publications }) => publications)
